@@ -4,7 +4,7 @@
 // @version		1.0.2
 // @description		Press SHIFT + ALT + G and the location of your current geoguessr game will open in a new tab
 // @author		tcortega, Ptorioo
-// @homepage		https://github.com/tcortega
+// @homepage		https://github.com/Ptorioo
 // @downloadURL		https://gist.github.com/Ptorioo/GeoguessrCheat
 // @updateURL		https://gist.github.com/Ptorioo/GeoguessrCheat
 // @match		http*://*/*
