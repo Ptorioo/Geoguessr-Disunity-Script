@@ -37,6 +37,7 @@ function getApiUrl(url, gamemode) {
     case "DUELS":
     case "TEAM-DUELS":
     case "LIVE-CHALLENGE":
+    case "BULLSEYE":
     case "BATTLE-ROYALE": {
       return url.replace("geoguessr.com", "game-server.geoguessr.com/api").replace("team-duels", "duels");
     }
@@ -46,7 +47,6 @@ function getApiUrl(url, gamemode) {
     case "COMPETITIVE-STREAK": {
       return url.replace("geoguessr.com/competitive-streak", "game-server.geoguessr.com/api/competitive-streaks");
     }
-
     case "GAME": {
       return url.replace("geoguessr.com/game", "geoguessr.com/api/v3/games");
     }
@@ -96,6 +96,11 @@ function formatLiveChallengeResponse(jsonData) {
   return { round: jsonData.currentRoundNumber, rounds };
 }
 
+function formatBullsEyeResponse(jsonData) {
+  const rounds = jsonData.rounds.map((r) => ({ lat: r.panorama.lat, lng: r.panorama.lng }));
+  return { round: jsonData.currentRoundNumber, rounds };
+}
+
 function formatBattleRoyaleResponse({ currentRoundNumber, rounds }) {
   return { round: currentRoundNumber, rounds };
 }
@@ -109,8 +114,9 @@ function formatResponse(gameMode) {
 
   if (gameMode == "DUELS"|| gameMode == "TEAM-DUELS") return formatDuelsResponse(jsonData);
   if (gameMode == "COMPETITIVE-STREAKS") return formatStreaksResponse(jsonData);
-  if (gameMode == "BATTLE-ROYALE") return formatBattleRoyaleResponse(jsonData);
   if (gameMode == "LIVE-CHALLENGE") return formatLiveChallengeResponse(jsonData);
+  if (gameMode == "BULLSEYE") return formatBullsEyeResponse(jsonData);
+  if (gameMode == "BATTLE-ROYALE") return formatBattleRoyaleResponse(jsonData);
   if (gameMode == "GAMES") return formatGameResponse(jsonData);
 }
 
