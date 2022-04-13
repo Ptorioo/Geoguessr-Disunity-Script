@@ -92,7 +92,7 @@ function formatStreaksResponse(jsonData) {
 }
 
 function formatLiveChallengeResponse(jsonData) {
-  const rounds = jsonData.rounds.map((r) => ({ lat: r.panorama.lat, lng: r.panorama.lng }));
+  const rounds = jsonData.rounds.map((r) => ({ lat: r.question.panoramaQuestionPayload.panorama.lat, lng: r.question.panoramaQuestionPayload.panorama.lng }));
   return { round: jsonData.currentRoundNumber, rounds };
 }
 
