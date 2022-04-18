@@ -58,7 +58,7 @@ function isApiPage() {
 }
 
 function makeApiCall(apiUrl) {
-  window.open(apiUrl, "_blank");
+  window.open(apiUrl, "_blank", "popup");
 }
 
 function handleChallenge() {
@@ -67,7 +67,7 @@ function handleChallenge() {
   const rounds = json.props.pageProps.game.rounds;
   const { lat, lng } = rounds[rounds.length - 1];
 
-  openMaps({ lat, lng }, "_blank");
+  openMaps({ lat, lng }, "_blank", "popup");
 }
 
 function handleKeyEvent() {
@@ -129,7 +129,7 @@ function getLocation(gameMode) {
 }
 
 function openMaps(location, target = "_self") {
-  const mapUrl = `https://google.com/maps/place/${location.lat},${location.lng}`;
+  const mapUrl = `https://google.com/maps/place/${location.lat},${location.lng}/@${location.lat},${location.lng-5},6z`;
   window.open(mapUrl, target);
 }
 
