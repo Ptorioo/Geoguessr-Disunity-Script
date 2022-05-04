@@ -58,7 +58,7 @@ function isApiPage() {
 }
 
 function makeApiCall(apiUrl) {
-  window.open(apiUrl, "_blank", "popup");
+  window.open(apiUrl, "_blank", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=700, height=500, top=0, left=0");
 }
 
 function handleChallenge() {
