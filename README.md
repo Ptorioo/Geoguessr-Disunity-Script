@@ -1,4 +1,4 @@
-# GeoguessrCheat
+# Geoguessr Disunity Script
 
 Geoguessr Cheat Script v1.0.2, credit to tcortega for the original script.
 Updated frequently, works on any mode.
