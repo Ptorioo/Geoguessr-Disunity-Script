@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name		Geoguessr Disunity Script
-// @namespace	https://github.com/Ptorioo
-// @version		1.0.3
-// @description	Press SHIFT + ALT + G and the location of your current geoguessr game will open in a new tab
-// @author		Ptorioo
-// @homepage	https://github.com/Ptorioo
-// @match		https://www.geoguessr.com/*
-// @grant		none
-// @run-at		document-idle
+// @name        Geoguessr Disunity Script
+// @namespace   https://github.com/Ptorioo
+// @version     1.0.3
+// @description Press SHIFT + ALT + G and the location of your current geoguessr game will open in a new tab
+// @author      Ptorioo
+// @homepage    https://github.com/Ptorioo
+// @match       https://www.geoguessr.com/*
+// @grant       none
+// @run-at      document-idle
 // @license     MIT
 // ==/UserScript==
 
