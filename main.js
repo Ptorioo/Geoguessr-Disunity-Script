@@ -30,15 +30,19 @@ function getApiUrl(url){
         case "BATTLE-ROYALE": {
             return url.replace("geoguessr.com", "game-server.geoguessr.com/api").replace("team-duels", "duels");
         }
-        case "QUIZ":{
+        case "QUIZ": {
             return url.replace("geoguessr.com/quiz/play", "game-server.geoguessr.com/api/live-challenge");
         }
         case "COMPETITIVE-STREAK": {
             return url.replace("geoguessr.com/competitive-streak", "game-server.geoguessr.com/api/competitive-streaks");
         }
         case "GAME": {
-            return url.replace("geoguessr.com/game", "geoguessr.com/api/v3/games");
-    }
+            return url.replace("geoguessr.com/game", "geoguessr.com/api/v3/games").replace("geoguessr.com/challenge", "geoguessr.com/api/v3/games");
+        }
+        case "CHALLENGE": {
+            let gt = __NEXT_DATA__.props.pageProps.game.token;
+            return `https://www.geoguessr.com/api/v3/games/${gt}?client=web`;
+        }
   }
 }
 
@@ -49,16 +53,16 @@ function makeApiCall(url){
         if(Number.isNaN(cur)) cur = x.round -1;
         let round = rounds[cur];
         switch (getGameMode(url,1)) {
-            case "DUELS" :
-            case "BULLSEYE" : {
+            case "DUELS":
+            case "BULLSEYE": {
                 round = round.panorama;
                 break;
             }
-            case "LIVE-CHALLENGE" : {
+            case "LIVE-CHALLENGE": {
                 round = round.question.panoramaQuestionPayload.panorama;
                 break;
             }
-            case "COMPETITIVE-STREAKS" : {
+            case "COMPETITIVE-STREAKS": {
                 round = x.player.currentRound;
             }
         }
