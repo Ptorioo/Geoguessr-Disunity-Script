@@ -2,7 +2,7 @@
 // @name        Geoguessr Disunity Script
 // @namespace   https://github.com/Ptorioo
 // @version     1.0.3
-// @description Press SHIFT + ALT + G and the location of your current geoguessr game will open in a new tab
+// @description Geoguessr cheat/hack. Press SHIFT + ALT + G and the location of your current geoguessr game will open in a new window.
 // @author      Ptorioo
 // @homepage    https://github.com/Ptorioo
 // @match       https://www.geoguessr.com/*
