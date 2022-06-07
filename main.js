@@ -63,7 +63,7 @@ function makeApiCall(url){
         }
         let lat = round.lat;
         let lng = round.lng;
-        window.open(`https://www.google.com/maps/place/${lat},${lng}/@${lat},${lng-5},6.7z`,"_blank", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=800, height=500, top=0, left=0")
+        window.open(`https://www.google.com/maps/place/${lat},${lng}/@${lat},${lng-5},6.7z`,"_blank", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=800, height=500, top=0, left=0");
     })
 }
 
